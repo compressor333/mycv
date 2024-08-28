@@ -8,6 +8,7 @@ import {ClerkProvider} from "@clerk/clerk-react";
 const key = 'pk_test_aW5ub2NlbnQtZm93bC03NC5jbGVyay5hY2NvdW50cy5kZXYk'
 
 // TODO
+
 // animate framer siuriken
 // ninja styling
 // add carousel
