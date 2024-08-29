@@ -7,8 +7,8 @@ import AppContext from "../context/AppContext.jsx";
 
 
 export const FooterScreen = () => {
-    const {theme}= useContext(AppContext)
-    console.log(theme)
+    const value= useContext(AppContext)
+    console.log(value)
     const isSmallDevice = useMediaQuery("only screen and (max-width : 845px)");
     console.log(isSmallDevice)
 

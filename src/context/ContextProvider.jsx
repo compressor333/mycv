@@ -1,28 +1,26 @@
 import {useState} from "react";
 import AppContext from "./AppContext.jsx";
-import {useMediaQuery} from "@uidotdev/usehooks";
 
 const theme = [
     {
-        flexDirection: 'row'
+        color: 0xff0000
     },
     {
-        flexDirection: 'column'
+        color: 0xffff
     }
 ]
 
-const hello = () => {
-    console.log('hellllllooo')
-}
 
-const value = {theme}
 
 export const ContextProvider = ({children}) => {
     const [selectedStyle, setSelectedStyle] = useState(0)
+    const click = () => {
+        setSelectedStyle(prevValue => prevValue === 0 ? 1 : 0)
+    }
     const [isReady, setIsReady] = useState(false)
-    console.log('hello from provider')
-
+    const value = theme[selectedStyle]
+    console.log(value)
     return (
-        <AppContext.Provider value={value}>{children}</AppContext.Provider>
+        <AppContext.Provider value={{value, click}}>{children}</AppContext.Provider>
     )
 }
